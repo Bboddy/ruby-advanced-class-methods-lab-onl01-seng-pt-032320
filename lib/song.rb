@@ -50,7 +50,7 @@ class Song
     }
   end
   
-  def self.new_from_filename
+  def self.new_from_filename(fileSearch)
     
   end
 end
