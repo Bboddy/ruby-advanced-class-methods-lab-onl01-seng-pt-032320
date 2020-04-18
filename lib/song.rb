@@ -50,13 +50,19 @@ class Song
     }
   end
   
-  def self.new_from_filename(fileSearch)
-    firstHalf = fileSearch.split(" - ")
+  def self.new_from_filename(fileCreate)
+    firstHalf = fileCreate.split(" - ")
     song = self.create
     song.artist_name = firstHalf[0]
     song.name = firstHalf[1].delete_suffix!('.mp3')
     return song
   end
   
-  def create_from_filename()
+  def create_from_filename(fileCreate)
+    firstHalf = fileCreate.split(" - ")
+    song = self.create
+    song.artist_name = firstHalf[0]
+    song.name = firstHalf[1].delete_suffix!('.mp3')
+    return song
+  end
 end
