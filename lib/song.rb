@@ -52,7 +52,7 @@ class Song
   
   def self.new_from_filename(fileCreate)
     parsedSongFile = fileCreate.split(" - ")
-    song = self.create
+    song = self.new
     song.artist_name = parsedSongFile[0]
     song.name = parsedSongFile[1].delete_suffix!('.mp3')
     return song
