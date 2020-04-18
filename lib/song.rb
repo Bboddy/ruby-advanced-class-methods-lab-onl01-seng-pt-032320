@@ -53,6 +53,6 @@ class Song
   def self.new_from_filename(fileSearch)
     firstHalf = fileSearch.split(" - ")
     song.artist_name = firstHalf[0]
-    song.name = 
+    song.name = firstHalf[1]
   end
 end
