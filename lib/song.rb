@@ -65,4 +65,8 @@ class Song
     song.name = parsedSongFile[1].delete_suffix!('.mp3')
     return song
   end
+  
+  def self.destroy_all
+    self.all.clear
+  end
 end
