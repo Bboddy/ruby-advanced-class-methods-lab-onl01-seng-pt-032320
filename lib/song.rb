@@ -51,10 +51,10 @@ class Song
   end
   
   def self.new_from_filename(fileCreate)
-    parsedSong = fileCreate.split(" - ")
+    parsedSongFile = fileCreate.split(" - ")
     song = self.create
-    song.artist_name = firstHalf[0]
-    song.name = firstHalf[1].delete_suffix!('.mp3')
+    song.artist_name = parsedSongFile[0]
+    song.name = parsedSongFile[1].delete_suffix!('.mp3')
     return song
   end
   
