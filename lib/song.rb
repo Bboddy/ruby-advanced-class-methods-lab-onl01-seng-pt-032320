@@ -57,4 +57,6 @@ class Song
     song.name = firstHalf[1].delete_suffix!('.mp3')
     return song
   end
+  
+  def create_from_filename()
 end
