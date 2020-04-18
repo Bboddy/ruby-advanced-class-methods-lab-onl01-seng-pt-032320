@@ -58,7 +58,7 @@ class Song
     return song
   end
   
-  def create_by_name(fileCreate)
+  def self.create_from_filename(fileCreate)
     parsedSongFile = fileCreate.split(" - ")
     song = self.create
     song.artist_name = parsedSongFile[0]
